@@ -13,18 +13,19 @@ window.onload = function() {
   let extension = [".com", ".net", ".pt", ".ly", ".es", ".org"];
 
   function dominio1() {
-    let domains = "<h1>HOLA</h1>";
+    let domains = "<h1 class='text-center'>Domain Generator</h1><div class='d-flex justify-content-center'><ol class='mt-5 list-group-numbered'>";
 
     for (let i = 0; i < pronoun.length; i++) {
       for (let j = 0; j < adj.length; j++) {
         for (let k = 0; k < noun.length; k++) {
           for (let l = 0; l < extension.length; l++) {
             let domain = pronoun[i] + adj[j] + noun[k] + extension[l];
-            domains += domain + "\n";
+            domains += `<li class="list-group-item">${domain}</li>`;
           }
         }
       }
     }
+    domains += "</ol></div>";
     return domains;
   }
   // console.log(dominio1());
